@@ -1,0 +1,52 @@
+<!DOCTYPE <html>
+<head>
+	<title>D3 Playground</title>
+	<script src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+	<h2>David's D3.JS Playground</h2>
+	<h3>What is D3?</h3>
+	<p>D3.js (or just D3 for Data-Driven Documents) is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented SVG, HTML5, and CSS standards. It is the successor to the earlier Protovis framework.[2] In contrast to many other libraries, D3.js allows great control over the final visual result.[3] Its development was noted in 2011,[4] as version 2.0.0 was released in August 2011.[5]</p>
+	<h4>Internal Links:</h4>
+	<ul>
+		<li><%= link_to "Data Visualization; Beginning", pages_datavis_path %></li>
+		<li><%= link_to %></li>
+		<li><%= link_to %></li>
+		<li><%= link_to %></li>
+	</ul>
+
+	<h4>Basic Functions:</h4>
+	<p>To start, I learned how to create three basic "svg" shapes. SVG = Scalable Vector Graphics:</p>
+	<p>p.s. I'm following this youtube video tutorial <a href="https://www.youtube.com/watch?v=TR39nfAW1dw&index=3&list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p">here</a>.</p>
+
+	<h4>WAHOO! A FEW SHAPES!</h4>
+
+	<script type="text/javascript">
+
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500);
+
+		var circle = canvas.append("circle")
+					.attr("cx", 250)
+					.attr("cy", 250)
+					.attr("r", 50)
+					.attr("fill", "red");
+
+		var rect = canvas.append("rect")
+					.attr("width", 100)
+					.attr("height", 50);
+
+		var line = canvas.append("line")
+					.attr("x1", 0)
+					.attr("y1", 100)
+					.attr("x2", 400)
+					.attr("y2", 400)
+					.attr("stroke", "green")
+					.attr("stroke-width", 20);
+
+	</script>
+
+</body>
+</html>

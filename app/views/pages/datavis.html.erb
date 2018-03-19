@@ -1,0 +1,33 @@
+<!DOCTYPE <html>
+<head>
+	<title>D3 Playground</title>
+	<script src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+	<h2>Data Visualizations</h2>
+	<p>Visualizing a small array of data using rectangles. Link to the lesson <a href="https://www.youtube.com/watch?v=4haBbPEClP4&list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p&index=4">here</a></p>
+	<p><%= link_to "Back", root_path %></p>
+	<br>
+
+	<script type="text/javascript">
+
+		var dataArray = [20, 40, 50];
+
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500);
+
+		var bars = canvas.selectAll("rect")
+					.data(dataArray)
+					.enter()
+						.append("rect")
+						.attr("width", function(d) { return d * 10; })
+						.attr("height", 50)
+						.attr("y", function(d, i) { return i * 75 });
+
+
+	</script>
+
+</body>
+</html>
