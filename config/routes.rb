@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get 'pages/datavis'
   get 'pages/scales'
+  get 'pages/groups'
+  get 'pages/enter'
 
 end
